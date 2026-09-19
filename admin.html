@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Admin Panel</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="admin-page">
+    <!-- Password overlay for basic access control -->
+    <div id="auth-overlay" class="auth-overlay" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+      <form id="auth-form" class="auth-box">
+        <h1 id="auth-title">Admin Access</h1>
+        <p>Enter password to continue.</p>
+        <label for="admin-password">Password</label>
+        <input id="admin-password" name="password" type="password" required />
+        <p id="auth-error" class="error-text" aria-live="polite"></p>
+        <button type="submit">Unlock</button>
+      </form>
+    </div>
+
+    <main class="admin-container">
+      <header>
+        <h1>Portfolio Admin Panel</h1>
+        <p>Update your portfolio text and links. Changes are saved in this browser via LocalStorage.</p>
+      </header>
+
+      <form id="admin-form">
+        <fieldset>
+          <legend>Core Profile</legend>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" />
+
+          <label for="jobTitle">Job Title</label>
+          <input id="jobTitle" name="jobTitle" type="text" />
+
+          <label for="profileImage">Profile Image URL</label>
+          <input id="profileImage" name="profileImage" type="url" />
+
+          <label for="born">Born</label>
+          <input id="born" name="born" type="text" />
+
+          <label for="nationality">Nationality</label>
+          <input id="nationality" name="nationality" type="text" />
+
+          <label for="experience">Experience</label>
+          <input id="experience" name="experience" type="text" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Article Sections</legend>
+          <label for="summary">Introduction / Summary</label>
+          <textarea id="summary" name="summary" rows="4"></textarea>
+
+          <label for="education">Early Life & Education</label>
+          <textarea id="education" name="education" rows="4"></textarea>
+
+          <label for="career">Career & Professional Experience</label>
+          <textarea id="career" name="career" rows="4"></textarea>
+
+          <label for="skills">Technical Skills (comma separated)</label>
+          <textarea id="skills" name="skills" rows="3"></textarea>
+
+          <label for="projects">Notable Projects (one per line)</label>
+          <textarea id="projects" name="projects" rows="5"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Contact Information</legend>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" />
+
+          <label for="website">Website URL</label>
+          <input id="website" name="website" type="url" />
+
+          <label for="linkedin">LinkedIn URL</label>
+          <input id="linkedin" name="linkedin" type="url" />
+        </fieldset>
+
+        <div class="admin-actions">
+          <button type="submit">Save Changes</button>
+          <button type="button" id="reset-defaults">Reset to Placeholders</button>
+          <button type="button" id="logout-admin">Lock Admin</button>
+          <a href="index.html">View Portfolio</a>
+        </div>
+
+        <p id="save-status" aria-live="polite"></p>
+      </form>
+    </main>
+
+    <script src="admin.js"></script>
+  </body>
+</html>

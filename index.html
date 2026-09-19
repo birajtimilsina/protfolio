@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[BIRAJ - INSERT YOUR NAME HERE] - Wikipedia</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Wikipedia-like personal toolbar -->
+    <header class="top-toolbar" aria-label="Personal tools">
+      <nav>
+        <a href="admin.html">Admin Panel</a>
+        <a href="#">Talk</a>
+        <a href="#">History</a>
+      </nav>
+    </header>
+
+    <div class="wiki-layout">
+      <!-- Left sidebar navigation -->
+      <aside class="sidebar" aria-label="Sidebar navigation">
+        <div class="sidebar-brand">Wikipedia</div>
+        <section>
+          <h2>Navigation</h2>
+          <ul>
+            <li><a href="#introduction">Main page</a></li>
+            <li><a href="#career">Career</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Tools</h2>
+          <ul>
+            <li><a href="admin.html">Edit profile content</a></li>
+            <li><a href="#">What links here</a></li>
+            <li><a href="#">Printable version</a></li>
+          </ul>
+        </section>
+      </aside>
+
+      <!-- Main article area -->
+      <main class="content" id="main-content">
+        <article class="article-content">
+          <!-- Wikipedia-like page actions and search -->
+          <div class="page-controls" aria-label="Page controls">
+            <nav class="left-tabs" aria-label="Article tabs">
+              <a href="#" class="is-active">Article</a>
+              <a href="#">Talk</a>
+            </nav>
+            <nav class="right-tabs" aria-label="Reading actions">
+              <a href="#" class="is-active">Read</a>
+              <a href="admin.html">Edit</a>
+              <a href="#">View history</a>
+              <label class="wiki-search">
+                <span class="sr-only">Search portfolio</span>
+                <input type="search" placeholder="Search portfolio" />
+              </label>
+            </nav>
+          </div>
+
+          <header>
+            <h1 id="page-title-text" data-field="name">[BIRAJ - INSERT YOUR NAME HERE]</h1>
+            <p class="subtitle" data-field="jobTitle">[BIRAJ - INSERT JOB TITLE HERE]</p>
+          </header>
+
+          <!-- Dynamic table of contents -->
+          <section class="toc-box" aria-labelledby="toc-title">
+            <div class="toc-header">
+              <h2 id="toc-title">Contents</h2>
+              <button id="toc-toggle" type="button" aria-expanded="true">hide</button>
+            </div>
+            <ol id="toc-list"></ol>
+          </section>
+
+          <!-- Wikipedia style infobox -->
+          <aside class="infobox" aria-label="Profile infobox">
+            <h2 data-field="name">[BIRAJ - INSERT YOUR NAME HERE]</h2>
+            <img
+              id="profile-image"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/300px-No-Image-Placeholder.svg.png"
+              alt="[BIRAJ - INSERT YOUR PROFILE IMAGE HERE]"
+              data-field="profileImage"
+            />
+            <table>
+              <tbody>
+                <tr>
+                  <th>Born</th>
+                  <td data-field="born">[BIRAJ - INSERT DATE OF BIRTH HERE]</td>
+                </tr>
+                <tr>
+                  <th>Nationality</th>
+                  <td data-field="nationality">[BIRAJ - INSERT NATIONALITY HERE]</td>
+                </tr>
+                <tr>
+                  <th>Occupation</th>
+                  <td data-field="jobTitle">[BIRAJ - INSERT JOB TITLE HERE]</td>
+                </tr>
+                <tr>
+                  <th>Experience</th>
+                  <td data-field="experience">[BIRAJ - INSERT YEARS OF EXPERIENCE HERE]</td>
+                </tr>
+              </tbody>
+            </table>
+          </aside>
+
+          <section id="introduction" class="content-section fade-target">
+            <h2>Introduction / Summary</h2>
+            <p data-field="summary">
+              [BIRAJ - INSERT PROFESSIONAL SUMMARY HERE]
+            </p>
+          </section>
+
+          <section id="education" class="content-section fade-target">
+            <h2>Early Life &amp; Education</h2>
+            <p data-field="education">
+              [BIRAJ - INSERT EARLY LIFE AND EDUCATION DETAILS HERE]
+            </p>
+          </section>
+
+          <section id="career" class="content-section fade-target">
+            <h2>Career &amp; Professional Experience</h2>
+            <p data-field="career">
+              [BIRAJ - INSERT CAREER DETAILS HERE]
+            </p>
+          </section>
+
+          <section id="skills" class="content-section fade-target">
+            <h2>Technical Skills</h2>
+            <ul class="wiki-list" id="skills-list"></ul>
+          </section>
+
+          <section id="projects" class="content-section fade-target">
+            <h2>Notable Projects</h2>
+            <ol id="projects-list" class="projects-list"></ol>
+          </section>
+
+          <section id="contact" class="content-section fade-target">
+            <h2>Contact Information</h2>
+            <p>Email: <a id="contact-email" href="#" data-field="email">[BIRAJ - INSERT EMAIL HERE]</a></p>
+            <p>Website: <a id="contact-website" href="#" data-field="website">[BIRAJ - INSERT WEBSITE URL HERE]</a></p>
+            <p>LinkedIn: <a id="contact-linkedin" href="#" data-field="linkedin">[BIRAJ - INSERT LINKEDIN URL HERE]</a></p>
+          </section>
+        </article>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
